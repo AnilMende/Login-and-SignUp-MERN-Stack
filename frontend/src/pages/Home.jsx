@@ -19,7 +19,7 @@ const Home = () => {
     const handleLogout = (event) => {
         localStorage.removeItem("token");
         localStorage.removeItem("loggedInUser");
-        handleSuccess('User LoggedOut')
+        handleSuccess('LoggedOut successfully')
         setTimeout(() => {
             navigate('/login');
         }, 1000)
@@ -52,7 +52,7 @@ const Home = () => {
 
     return (
         <div>
-            <h1>{loggedinUser}</h1>
+            <h1>Welcome {loggedinUser}</h1>
             <button onClick={handleLogout}>LogOut</button>
             <div>
                 {
